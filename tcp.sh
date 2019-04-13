@@ -60,8 +60,8 @@ installbbrplus(){
 		rm -f kernel-${kernel_version}.rpm
 	elif [[ "${release}" == "debian" || "${release}" == "ubuntu" ]]; then
 		mkdir bbrplus && cd bbrplus
-		wget -N --no-check-certificate http://${github}/bbrplus/debian-ubuntu/${bit}/linux-headers-${kernel_version}.deb
-		wget -N --no-check-certificate http://${github}/bbrplus/debian-ubuntu/${bit}/linux-image-${kernel_version}.deb
+		wget -N --no-check-certificate http://raw.githubusercontent.com/dongxinb/kernel/master/bbrplus/linux-headers-${kernel_version}.deb
+		wget -N --no-check-certificate http://raw.githubusercontent.com/dongxinb/kernel/master/bbrplus/linux-image-${kernel_version}.deb
 		dpkg -i linux-headers-${kernel_version}.deb
 		dpkg -i linux-image-${kernel_version}.deb
 		cd .. && rm -rf bbrplus
