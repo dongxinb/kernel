@@ -623,7 +623,7 @@ Set_crontab_monitor_brook(){
 crontab_monitor_brook_cron_start(){
     crontab -l > "$file_1/crontab.bak"
     sed -i "/brook-pf-mod.sh monitor/d" "$file_1/crontab.bak"
-    echo -e "\n*/2 * * * *  /bin/bash $file_1/brook-pf-mod.sh monitor" >> "$file_1/crontab.bak"
+    echo -e "\n*/1 * * * *  /bin/bash $file_1/brook-pf-mod.sh monitor" >> "$file_1/crontab.bak"
     crontab "$file_1/crontab.bak"
     rm -r "$file_1/crontab.bak"
     cron_config=$(crontab -l | grep "brook-pf-mod.sh monitor")
