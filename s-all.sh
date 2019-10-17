@@ -460,6 +460,7 @@ if   [ "${selected}" == "1" ]; then
     "timeout": 120,
     "udp_timeout": 60,
     "method": "${shadowsockscipher}",
+    "obfs": "simple_obfs_http_compatible",
     "speed_limit_per_con": 0,
     "dns_ipv6": false,
     "connect_verbose_info": 0,
